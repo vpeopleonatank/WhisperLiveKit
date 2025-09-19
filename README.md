@@ -250,7 +250,7 @@ docker run --gpus all -p 8000:8000 --name wlk wlk --model large-v3 --language fr
 #### Customization
 
 - `--build-arg` Options:
-  - `EXTRAS="whisper-timestamped"` - Add extras to the image's installation (no spaces). Remember to set necessary container options!
+  - `EXTRAS="diarization"` is enabled by default so the Sortformer diarization backend works out of the box. Override if you want to slim the image or add more extras (comma separated, no spaces, e.g. `EXTRAS="diarization,whisper-timestamped"`).
   - `HF_PRECACHE_DIR="./.cache/"` - Pre-load a model cache for faster first-time start
   - `HF_TKN_FILE="./token"` - Add your Hugging Face Hub access token to download gated models
 

@@ -5,7 +5,8 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-ARG EXTRAS
+# Default to installing diarization extras so Sortformer works inside the container.
+ARG EXTRAS=diarization
 ARG HF_PRECACHE_DIR
 ARG HF_TKN_FILE
 
